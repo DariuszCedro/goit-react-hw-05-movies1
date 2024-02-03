@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import css from './Cast.module.css';
+import { nanoid } from 'nanoid';
 
 const Cast = () => {
   const [movieCast, setMovieCast] = useState([]);
@@ -32,7 +33,7 @@ const Cast = () => {
       <h2>Cast</h2>
       <div className={css.cast}>
         {movieCast.map(actor => (
-          <li key={actor.id}>
+          <li key={nanoid()}>
             <img
               className={css.portrait}
               src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
