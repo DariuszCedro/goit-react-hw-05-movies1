@@ -23,7 +23,7 @@ const Trending = () => {
         .catch(error => console.log(error));
     }
     fetchTrend();
-  });
+  }, []);
 
   return (
     <div>
